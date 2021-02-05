@@ -6,11 +6,23 @@ export default function App() {
   var [month, setMonth] = useState(0);
   var [year, setYear] = useState(0);
   var [luckyNumber, setLuckyNumber] = useState(0);
+  var [toggle, setToggle] = useState(0);
+  var [resultMessage, setResultMessage] = useState("");
 
   // function clickHandler(event) {
   //   console.log(event.target.value);
   // }
-
+  const showResult = (total, luckyNumber) => {
+    if (total % luckyNumber === 0) {
+      //setToggle = 1;
+      console.log(total % luckyNumber);
+      setResultMessage("Its Lucky");
+      console.log(resultMessage);
+    } else {
+      //setToggle = 1;
+      setResultMessage("Its Not");
+    }
+  };
   const getSum = (number) => {
     var sum = 0;
     while (number !== 0) {
@@ -35,6 +47,8 @@ export default function App() {
     let total = daySum + monthSum + yearSum;
 
     console.log(total);
+
+    showResult(total, luckyNumber);
   };
 
   return (
@@ -85,7 +99,7 @@ export default function App() {
           <button>Check</button>
         </form>
       </div>
-      <div></div>
+      <div>{resultMessage}</div>
     </>
   );
 }
