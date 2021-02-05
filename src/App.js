@@ -108,6 +108,14 @@ export default function App() {
       <div className="result" style={{ backgroundColor: backgroundColor }}>
         {resultMessage}
       </div>
+      <footer>
+        <div className="footer">
+          <p>
+            Made with React ⚛️ by{" "}
+            <a href="https://twitter.com/shahazad__">Shahazad</a>
+          </p>
+        </div>
+      </footer>
     </>
   );
 }

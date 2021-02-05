@@ -20,6 +20,8 @@ p {
   margin: 1rem;
   padding: 0.5rem;
   font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
 }
 input {
   margin: 1rem;
@@ -48,4 +50,7 @@ button {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   color: white;
+}
+.footer {
+  margin-top: 180px;
 }
