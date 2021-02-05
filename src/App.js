@@ -6,7 +6,7 @@ export default function App() {
   var [month, setMonth] = useState(0);
   var [year, setYear] = useState(0);
   var [luckyNumber, setLuckyNumber] = useState(0);
-  var [toggle, setToggle] = useState(0);
+  var [backgroundColor, setBackgroundColor] = useState("");
   var [resultMessage, setResultMessage] = useState("");
 
   // function clickHandler(event) {
@@ -17,11 +17,16 @@ export default function App() {
     if (total % luckyNumber === 0) {
       console.log(total % luckyNumber);
       setResultMessage(" 🎉🎊 Hooray ! Its A Lucky Number 🎊🎉");
+      setBackgroundColor("#8330e3");
       console.log(resultMessage);
     } else {
+      setBackgroundColor("#E02D25");
+
       setResultMessage("😭😭 Sorry ! Its Not A Lucky Number 😭😭");
     }
   };
+
+  //function for sum of the digits
   const getSum = (number) => {
     var sum = 0;
     while (number !== 0) {
@@ -100,7 +105,9 @@ export default function App() {
           <button>Check</button>
         </form>
       </div>
-      <div className="result">{resultMessage}</div>
+      <div className="result" style={{ backgroundColor: backgroundColor }}>
+        {resultMessage}
+      </div>
     </>
   );
 }

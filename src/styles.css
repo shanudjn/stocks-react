@@ -42,7 +42,7 @@ button {
   max-width: 400px;
   margin: auto;
   border-radius: 4px;
-  background: #8330e3;
+  /* background-color: #8330e3; */
   text-align: center;
   padding: 1rem;
   font-family: "Montserrat", sans-serif;
