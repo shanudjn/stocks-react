@@ -13,14 +13,13 @@ export default function App() {
   //   console.log(event.target.value);
   // }
   const showResult = (total, luckyNumber) => {
+    //check for the answer
     if (total % luckyNumber === 0) {
-      //setToggle = 1;
       console.log(total % luckyNumber);
-      setResultMessage("Its Lucky");
+      setResultMessage(" 🎉🎊 Hooray ! Its A Lucky Number 🎊🎉");
       console.log(resultMessage);
     } else {
-      //setToggle = 1;
-      setResultMessage("Its Not");
+      setResultMessage("😭😭 Sorry ! Its Not A Lucky Number 😭😭");
     }
   };
   const getSum = (number) => {
@@ -33,13 +32,15 @@ export default function App() {
     return sum;
   };
   const handleSubmit = (event) => {
-    console.log(
-      `Day : ${day}
-      Month : ${month}
-      Year : ${year}
-      Lucky Number : ${luckyNumber}`
-    );
+    // console.log(
+    //   `Day : ${day}
+    //   Month : ${month}
+    //   Year : ${year}
+    //   Lucky Number : ${luckyNumber}`
+    // );
     event.preventDefault();
+
+    //get sum of individual digits
     let daySum = getSum(day);
     let monthSum = getSum(month);
     let yearSum = getSum(year);
@@ -99,7 +100,7 @@ export default function App() {
           <button>Check</button>
         </form>
       </div>
-      <div>{resultMessage}</div>
+      <div className="result">{resultMessage}</div>
     </>
   );
 }

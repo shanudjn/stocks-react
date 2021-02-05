@@ -29,7 +29,7 @@ input {
 }
 button {
   font-family: "Montserrat", sans-serif;
-  margin-left: 2rem;
+  margin-left: 1rem;
   margin-bottom: 2rem;
   padding: 1rem;
   border-radius: 4px;
@@ -37,4 +37,15 @@ button {
   color: white;
   font-weight: bold;
   cursor: pointer;
+}
+.result {
+  max-width: 400px;
+  margin: auto;
+  border-radius: 4px;
+  background: #8330e3;
+  text-align: center;
+  padding: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: white;
 }
